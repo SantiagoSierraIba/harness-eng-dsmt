@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run python -m pytest -q > failing-tests.txt 2>&1 && rm -f failing-tests.txt || true",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
